@@ -3,7 +3,7 @@ import Layouts from '../components/Layout/Layouts'
 
 const About = () => {
   return (
-    <Layouts>
+    <Layouts title={"About Us - Ecommerce"}>
        <div className="row contactus ">
         <div className="col-md-6 ">
           <img
@@ -25,6 +25,13 @@ const About = () => {
       </div>
     </Layouts>
   )
-}
+};
+
+Layouts.defaultProps = {
+  title: 'Ecommerce App -shop now',
+  description: 'Mern stack project',
+  keywords: 'mern, react, node, mongodb',
+  author:'Zakir bd'
+};
 
 export default About
