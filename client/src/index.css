@@ -80,3 +80,16 @@
     align-items: center;
     justify-content: center;
 }
+
+/* register style start  */
+.register{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 70vh;
+   flex-direction: column;
+}
+
+.register form input{
+   width:130% !important;
+}
