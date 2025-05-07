@@ -12,6 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Login from './pages/auth/Login';
 import Dashboard from './user/Dashboard';
 import PrivateRoute from './components/Routes/PrivateRoutes';
+import ForgotPassword from './pages/auth/ForgotPassword';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
            <Route path="" element={<Dashboard />}> </Route>
         </Route>
         
+        <Route path="/forgot-password" element={<ForgotPassword />}> </Route>
         <Route path="/register" element={<Register />}> </Route>
         <Route path="/login" element={<Login />}> </Route>
         <Route path="/about" element={<About />}> </Route>

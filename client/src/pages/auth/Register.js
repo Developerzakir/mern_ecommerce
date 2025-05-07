@@ -10,17 +10,18 @@ const Register = () => {
     const  [password,setPassword] = useState("");
     const  [phone,setPhone] = useState("");
     const  [address,setAddress] = useState("");
+    const  [answer,setAnswer] = useState("");
     const navigate  = useNavigate();
 
     //form handle submit function
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        console.log(name,email,password,phone,address);
+        console.log(name,email,password,phone,address,answer);
         
 
         try{
             const res = await axios.post("/api/vi/auth/register",{
-                name,email,password,phone,address,
+                name,email,password,phone,address,answer
             });
 
             if(res.data.success){
@@ -92,6 +93,16 @@ const Register = () => {
                    className="form-control" 
                    id="address" 
                    placeholder='Enter Your Address' 
+                   required />
+                </div>
+                <div className="mb-3">
+                   <input 
+                   value={answer} 
+                   onChange={(e)=>setAnswer(e.target.value)}
+                   type="text" 
+                   className="form-control" 
+                   id="address" 
+                   placeholder='What is your favorite pet?' 
                    required />
                 </div>
                
