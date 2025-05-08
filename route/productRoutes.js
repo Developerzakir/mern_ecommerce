@@ -6,8 +6,8 @@ import {
   getSingleProductController,
   productPhotoController,
   updateProductController,
-} from "../controllers/productController.js";
-import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
+} from "../controlers/productController.js";
+import { isAdmin, requireSignin } from "../middlewares/authMiddleware.js";
 import formidable from "express-formidable";
 
 const router = express.Router();
@@ -15,7 +15,7 @@ const router = express.Router();
 //routes
 router.post(
   "/create-product",
-  requireSignIn,
+  requireSignin,
   isAdmin,
   formidable(),
   createProductController
@@ -23,7 +23,7 @@ router.post(
 //routes
 router.put(
   "/update-product/:pid",
-  requireSignIn,
+  requireSignin,
   isAdmin,
   formidable(),
   updateProductController

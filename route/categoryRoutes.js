@@ -1,12 +1,12 @@
 import express from "express";
-import { isAdmin, requireSignIn } from "./../middlewares/authMiddleware.js";
+import { isAdmin, requireSignin } from "../middlewares/authMiddleware.js";
 import {
-  categoryControlller,
+  categoryController,
   createCategoryController,
   deleteCategoryController,
   singleCategoryController,
   updateCategoryController,
-} from "./../controllers/categoryController.js";
+} from "../controlers/categoryController.js";
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ const router = express.Router();
 // create category
 router.post(
   "/create-category",
-  requireSignIn,
+  requireSignin,
   isAdmin,
   createCategoryController
 );
@@ -22,13 +22,13 @@ router.post(
 //update category
 router.put(
   "/update-category/:id",
-  requireSignIn,
+  requireSignin,
   isAdmin,
   updateCategoryController
 );
 
 //getALl category
-router.get("/get-category", categoryControlller);
+router.get("/get-category", categoryController);
 
 //single category
 router.get("/single-category/:slug", singleCategoryController);
@@ -36,7 +36,7 @@ router.get("/single-category/:slug", singleCategoryController);
 //delete category
 router.delete(
   "/delete-category/:id",
-  requireSignIn,
+  requireSignin,
   isAdmin,
   deleteCategoryController
 );
