@@ -93,3 +93,10 @@
 .register form input{
    width:130% !important;
 }
+
+
+/* ==================== */
+.product-link {
+   text-decoration: none !important;
+   color: black !important;
+ }
