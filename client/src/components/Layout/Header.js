@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useAuth } from '../../context/auth'
 import toast, { Toaster } from 'react-hot-toast';
+import SearchInput from '../Form/SearchInput';
 
 const Header = () => {
   const [auth,setAuth] = useAuth();
@@ -24,6 +25,7 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
               <NavLink className="navbar-brand" href="#">E-commerce</NavLink>
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <SearchInput />
                 <li className="nav-item">
                   <NavLink to="/" className="nav-link" >Home</NavLink>
                 </li>
